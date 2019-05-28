@@ -1,0 +1,34 @@
+## YAML Template.
+---
+#Configuration Port
+server:
+    port: 8761
+    
+spring:
+  application:
+    name: service-discovery
+    cloud:
+    config:
+      profile: ${spring.profiles.active}
+      uri: http://localhost:8888/
+  profiles:
+    active: dev
+
+        
+eureka:
+  datacenter: cloud
+  instance:
+    leaseRenewalIntervalInSeconds: 30
+    metadataMap:
+      instanceId: ${vcap.application.instance_id:${spring.application.name}:${spring.application.instance_id:${server.port}}}
+ #Permite o Auto-Registro do Eureka
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+    registerWithEureka: false
+    fetchRegistry: false
+  server:
+    renewalPercentThreshold: 0.0
+    enableSelfPreservation: true
+    waitTimeInMsWhenSyncEmpty: 0
+    defaultOpenForTrafficCount: 0

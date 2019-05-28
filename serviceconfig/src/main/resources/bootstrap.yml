@@ -1,0 +1,38 @@
+server:
+  port: 8888
+
+spring:
+  cloud:
+    config:
+      enable: true
+      server:
+        bootstrap: true
+        git:
+          uri: https://github.com/yallmelo/repositoryconfigurations/
+  application:
+    name: config-server
+
+info:
+  version: 1.0
+  author: Yallison.Melo
+  repository: Github
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+
+  instance:
+    leaseRenewalIntervalInSeconds: 15
+    metadataMap:
+      instanceId: ${vcap.application.instance_id:${spring.application.name}:${spring.application.instance_id:${server.port}}}
+    management:
+      endpoint:
+        shutdown:
+          enabled: true
+      context-path: /manage/
+      security:
+        enabled: false
+    statusPageUrlPath: /info
+    healthCheckUrlPath: /health
+    preferIpAddress: true
