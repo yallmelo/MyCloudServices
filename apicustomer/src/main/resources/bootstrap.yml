@@ -1,0 +1,28 @@
+server:
+  port: 9001
+
+spring:
+  application:
+    name: config-server
+
+
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+
+  instance:
+    leaseRenewalIntervalInSeconds: 15
+    metadataMap:
+      instanceId: ${vcap.application.instance_id:${spring.application.name}:${spring.application.instance_id:${server.port}}}
+    management:
+      endpoint:
+        shutdown:
+          enabled: true
+      context-path: /manage/
+      security:
+        enabled: false
+    statusPageUrlPath: /info
+    healthCheckUrlPath: /health
+    preferIpAddress: true

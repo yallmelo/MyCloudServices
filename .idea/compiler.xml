@@ -9,11 +9,13 @@
         <module name="MyCloudServices" />
         <module name="servicediscovery" />
         <module name="serviceconfig" />
+        <module name="apicustomer" />
       </profile>
     </annotationProcessing>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="apicustomer" options="-parameters" />
       <module name="serviceconfig" options="-parameters" />
       <module name="servicediscovery" options="-parameters" />
     </option>
