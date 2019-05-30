@@ -1,4 +1,4 @@
-package br.com.ymsystem.apicustomer.Controller;
+package br.com.ymsystem.apiproduct.Controller;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -8,11 +8,11 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping("v1")
-public class CustomerController {
+public class ProductController {
 
     @GetMapping("/")
-    public ResponseEntity getTestURL() {
-        return new ResponseEntity<>("Return test", HttpStatus.OK);
+    public ResponseEntity getTestProduct(){
 
+        return new ResponseEntity("Product", HttpStatus.OK);
     }
 }

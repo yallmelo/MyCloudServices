@@ -6,16 +6,20 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="MyCloudServices" />
-        <module name="servicediscovery" />
-        <module name="serviceconfig" />
         <module name="apicustomer" />
+        <module name="servicediscovery" />
+        <module name="apigateway" />
+        <module name="apiproduct" />
+        <module name="MyCloudServices" />
+        <module name="serviceconfig" />
       </profile>
     </annotationProcessing>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="apicustomer" options="-parameters" />
+      <module name="apigateway" options="-parameters" />
+      <module name="apiproduct" options="-parameters" />
       <module name="serviceconfig" options="-parameters" />
       <module name="servicediscovery" options="-parameters" />
     </option>
