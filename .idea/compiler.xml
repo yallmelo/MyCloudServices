@@ -8,10 +8,11 @@
         <outputRelativeToContentRoot value="true" />
         <module name="apicustomer" />
         <module name="servicediscovery" />
+        <module name="apisales" />
         <module name="apigateway" />
-        <module name="apiproduct" />
-        <module name="MyCloudServices" />
         <module name="serviceconfig" />
+        <module name="MyCloudServices" />
+        <module name="apiproduct" />
       </profile>
     </annotationProcessing>
   </component>
@@ -20,6 +21,7 @@
       <module name="apicustomer" options="-parameters" />
       <module name="apigateway" options="-parameters" />
       <module name="apiproduct" options="-parameters" />
+      <module name="apisales" options="-parameters" />
       <module name="serviceconfig" options="-parameters" />
       <module name="servicediscovery" options="-parameters" />
     </option>

@@ -6,11 +6,10 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-public class CustomerController {
+public class PathCentral {
+    @GetMapping("/")
+    public ResponseEntity getPathInitial(){
 
-    @GetMapping("/first")
-    public ResponseEntity getTestURL() {
-        return new ResponseEntity<>("Return test", HttpStatus.OK);
-
+        return new ResponseEntity("Path Not Implemented", HttpStatus.NOT_IMPLEMENTED);
     }
 }
