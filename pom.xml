@@ -8,5 +8,12 @@
     <artifactId>MyCloudServices</artifactId>
     <version>1.0-SNAPSHOT</version>
 
-
+    <modules>
+        <module>apicustomer</module>
+        <module>apigateway</module>
+        <module>apiproduct</module>
+        <module>sales</module>
+        <module>servicediscovery</module>
+        <module>serviceconfig</module>
+    </modules>
 </project>
