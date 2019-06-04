@@ -12,7 +12,6 @@
 	<artifactId>apiproduct</artifactId>
 	<version>1.0</version>
 	<name>apiProduct</name>
-	<build>jar</build>
 	<description>Demo project for Spring Boot</description>
 
 	<properties>
