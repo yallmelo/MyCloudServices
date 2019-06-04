@@ -10,7 +10,6 @@
         <module name="servicediscovery" />
         <module name="apigateway" />
         <module name="serviceconfig" />
-        <module name="MyCloudServices" />
         <module name="apisales" />
         <module name="apiproduct" />
       </profile>
